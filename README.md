@@ -10,7 +10,7 @@ A Spatial and Adversarial Representation Learning Approach for Land Use Classifi
 
 ## Data preprocessing
 
-* Cities.py: In the source data, each building has a label. We divide the urban area into grids and calculate the proportion of each land type in the grid based on the building area. We then assign the major land-use types to each grid cell.
+* Cities.py: In the source data, each building has a label. We divide the urban area into grids and calculate the proportion of each land use type in the grid based on the building area. We then assign the major land use types to each grid cell.
 * Count_poi.py: The number of POIs for each POI category in each grid area is counted and stored.
 * pre-data.py: The number of POIs contained in each category node in the zone semantic tree is calculated and stored.
 
@@ -19,5 +19,5 @@ A Spatial and Adversarial Representation Learning Approach for Land Use Classifi
 * keras_topK.py: keras_topK.py is used to pre-train the semantic pattern extractor. 
 * grid.py: grid.py is utilized to process and output 3D tensors of the spatial configuration of regions.
 * mydata.py: It handles the input and label information required for model training and testing.
-* mian.py: Only after all data processing is complete can mian.py be run successfully. 
+* mian.py: mian.py can be run successfully only all data processing steps finish. 
 
