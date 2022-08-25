@@ -13,8 +13,8 @@ A Spatial and Adversarial Representation Learning Approach for Land Use Classifi
 * Cities.py: In the source data, each building has a label. We divide the urban area into grids and calculate the proportion of each land use type in the grid based on the building area. We then assign the major land use type to each grid cell.
 * Count_poi.py: The number of POIs for each POI category in each grid area is counted and stored.
 * pre_data.py: The number of POIs contained in each category node in the zone semantic tree is calculated and stored.
-* save_tf_idf.ipynb: The weight of each category node in the zone semantic tree is calculated according to TF-IDF.
-* save_sub_tree.ipynb: The top-k important nodes in the zone semantic trees are extracted and stored.
+* save_tf_idf.ipynb: The weight of each category node in zone semantic trees is calculated according to TF-IDF.
+* save_sub_tree.ipynb: The top-k important nodes in zone semantic trees are extracted and stored.
 
 ## Model 
 
