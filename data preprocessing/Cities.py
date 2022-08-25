@@ -4,15 +4,15 @@ import numpy as np
 from tqdm import tqdm
 
 
-def getDistance(lon1, lat1, lon2, lat2):  # 经度1，纬度1，经度2，纬度2 （十进制度数）
-# 将十进制度数转化为弧度
+def getDistance(lon1, lat1, lon2, lat2):  
+
     lon1, lat1, lon2, lat2 = map(radians, [lon1, lat1, lon2, lat2])
     # haversine公式
     dlon = lon2 - lon1
     dlat = lat2 - lat1
     a = sin(dlat / 2) ** 2 + cos(lat1) * cos(lat2) * sin(dlon / 2) ** 2
     c = 2 * asin(sqrt(a))
-    r = 6371  # 地球平均半径，单位为公里
+    r = 6371  
     return c * r * 1000
 
 def get_mean_location(url,city_name):
@@ -31,8 +31,7 @@ def get_mean_location(url,city_name):
     print("数据载入完毕")
     for i in loc_map:
         array=np.array(loc_map[i])
-        id_loc.append([i]+array.mean(axis=0).tolist()+id2info[i])   #取所有顶点的均值
-    print("数据计算完毕")
+        id_loc.append([i]+array.mean(axis=0).tolist()+id2info[i])   
     title=["id","lon","la","area","landuse"]
     info_data=pd.DataFrame(id_loc)
     info_data.to_csv("E:/LAND USE/data/"+city_name+"/"+city_name+"_landuse.csv",header=title,index=False)
@@ -40,7 +39,6 @@ def get_mean_location(url,city_name):
 def get_loca(url,city_name):
     file=url+city_name+"/"+city_name+"_lonla.csv"
     data=pd.read_csv(file,encoding='utf-8')
-    print("数据读取完毕")
     print([data.loc[1,"X"],data.loc[1,"Y"]])
 
 def pre_data():
@@ -81,7 +79,7 @@ def get_cell(url, city_name, scope, length):
         lon = 0.0012 * length / 100
     if city_name == "Lisboa":
         lon = 0.00115 * length / 100
-    # la=0.0018  #注意：不同经纬度情况下，200m的长度不同  #
+    # la=0.0018  
     minlon = scope[0][0]
     maxlon = scope[0][1]
     minla = scope[1][0]
