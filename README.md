@@ -11,7 +11,8 @@ A Spatial and Adversarial Representation Learning Approach for Land Use Classifi
 ## Data preprocessing
 
 * All files are used for data preprocessing.
-## model 
+
+## Model 
 
 * keras_topK.py is used to pre-train the semantic pattern extractor. 
 * Only after all data processing is complete can mian.py be run successfully. 
