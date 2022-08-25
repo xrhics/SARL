@@ -11,7 +11,7 @@ A Spatial and Adversarial Representation Learning Approach for Land Use Classifi
 ## Data preprocessing
 
 * Cities.py: In the source data, each building has a label. We divide the urban area into grids and calculate the proportion of each land type in the grid based on the building area. We then assign the major land-use types to each grid cell.
-* Count_poi.py: The number of POIs for each POI category in each grid area is counted and stored
+* Count_poi.py: The number of POIs for each POI category in each grid area is counted and stored.
 * pre-data.py: The number of POIs contained in each category node in the zone semantic tree is calculated and stored.
 
 ## Model 
